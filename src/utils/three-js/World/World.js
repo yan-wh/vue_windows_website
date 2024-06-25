@@ -20,8 +20,8 @@ let curIdx = 0;
 
 class World {
   constructor(container) {
-    camera = createCamera();
-    renderer = createRenderer();
+    camera = createCamera(container);
+    renderer = createRenderer(container);
     scene = createScene();
     loop = new Loop(camera, scene, renderer);
     container.append(renderer.domElement);
@@ -40,9 +40,15 @@ class World {
     threeDModels = await loadBirds();
 
     // move the target to the center of the front bird
-    controls.target.copy(threeDModels.parrot.position);
+    // controls.target.copy(threeDModels.parrot.position);
+    // loop.updatables.push(threeDModels.parrot, threeDModels.flamingo, threeDModels.stork);
 
-    scene.add(threeDModels.parrot, threeDModels.flamingo, threeDModels.stork);
+    // scene.add(threeDModels.parrot, threeDModels.flamingo, threeDModels.stork);
+
+    // 眼镜模型
+    controls.target.copy(threeDModels.glasses.position);
+
+    scene.add(threeDModels.glasses);
   }
 
   toNextView() {

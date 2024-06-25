@@ -2,7 +2,6 @@
     <div class="three-d">
       <div id="scene-container">
         <!-- Our <canvas> will be inserted here -->
-        <canvas></canvas>
       </div>
       <button class="btn" @click="toNextView">切换到下一个视角</button>
       <button class="btn" @click="toGlobalView">切换到全局视角</button>
@@ -33,7 +32,7 @@
   /* tell our scene container to take up the full page */
   position: absolute;
   width: 70%;
-  height: auto;
+  height: 450px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,7 +41,7 @@
     Set the container's background color to the same as the scene's
     background to prevent flashing on load
   */
-  background-color: skyblue;
+  background-color: whitesmoke;
 }
 
 </style>
