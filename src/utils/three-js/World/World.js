@@ -1,6 +1,6 @@
 
 
-import { loadBirds } from './components/birds/birds.js';
+import { loadGlasses } from './components/models/glasses.js';
 import { createCamera } from './components/camera.js';
 import { createLights } from './components/lights.js';
 import { createScene } from './components/scene.js';
@@ -32,12 +32,12 @@ class World {
     loop.updatables.push(controls);
     scene.add(ambientLight, mainLight);
 
-    const resizer = new Resizer(container, camera, renderer);
+    const resizer = new Resizer(container, camera, scene, renderer);
 
   }
 
   async init() {
-    threeDModels = await loadBirds();
+    threeDModels = await loadGlasses();
 
     // move the target to the center of the front bird
     // controls.target.copy(threeDModels.parrot.position);

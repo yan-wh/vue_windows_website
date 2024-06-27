@@ -12,7 +12,12 @@ function createControls(camera, canvas) {
 
   // controls.rotateSpeed = 0.5; // 旋转速度
   // controls.zoomSpeed = 1.2; // 缩放速度
-  // controls.panSpeed = 0.8; // 平移速度
+
+  // controls.enablePan = true; // 默认为 true，启用平移
+  // controls.panSpeed = 0.5; // 设置平移速度
+
+  // 如果需要键盘支持平移，可以设置 keys
+  // controls.keys = ["A", "S", "D", "W"]; // 分别对应左下右上方向键
 
   // controls.maxPolarAngle = Math.PI / 2; // 最大俯仰角度
   // controls.minPolarAngle = 0; // 最小俯仰角度

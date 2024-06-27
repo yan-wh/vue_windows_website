@@ -49,12 +49,15 @@ devDependencies:
   prettier:
     specifier: ^2.7.1
     version: 2.8.8
+  sass:
+    specifier: ^1.77.6
+    version: 1.77.6
   tailwindcss:
     specifier: ^3.4.4
     version: 3.4.4
   vite:
     specifier: ^3.0.9
-    version: 3.2.10
+    version: 3.2.10(sass@1.77.6)
 
 packages:
 
@@ -529,7 +532,7 @@ packages:
       '@babel/core': 7.24.4
       '@babel/plugin-transform-typescript': 7.24.4(@babel/core@7.24.4)
       '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.24.4)
-      vite: 3.2.10
+      vite: 3.2.10(sass@1.77.6)
       vue: 3.4.23
     transitivePeerDependencies:
       - supports-color
@@ -542,7 +545,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.2.10
+      vite: 3.2.10(sass@1.77.6)
       vue: 3.4.23
     dev: true
 
@@ -1528,6 +1531,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
+    dev: true
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -2046,6 +2053,16 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /sass@1.77.6:
+    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+    dev: true
+
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -2254,7 +2271,7 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite@3.2.10:
+  /vite@3.2.10(sass@1.77.6):
     resolution: {integrity: sha512-Dx3olBo/ODNiMVk/cA5Yft9Ws+snLOXrhLtrI3F4XLt4syz2Yg8fayZMWScPKoz12v5BUv7VEmQHnsfpY80fYw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2283,6 +2300,7 @@ packages:
       postcss: 8.4.38
       resolve: 1.22.8
       rollup: 2.79.1
+      sass: 1.77.6
     optionalDependencies:
       fsevents: 2.3.3
     dev: true

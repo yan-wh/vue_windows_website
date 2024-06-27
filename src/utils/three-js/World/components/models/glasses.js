@@ -2,7 +2,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 import { setupModel } from './setupModel.js';
 
-async function loadBirds() {
+async function loadGlasses() {
   const loader = new GLTFLoader();
 
   // 异步获取，下面的 parrotData.scene 不会马上获取到值
@@ -36,4 +36,4 @@ async function loadBirds() {
   };
 }
 
-export { loadBirds };
+export { loadGlasses };
