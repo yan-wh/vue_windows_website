@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto" style="height: 100vh;">
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 shadow-md" style="max-height: 50px;">
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -21,6 +21,7 @@
               </a></li>
           </ul>
         </div>
+        <div><img :src="logo" class="h-full" style="max-height: 50px;" /></div>
         <a class="btn btn-ghost text-xl">谱林斯顿门窗</a>
       </div>
       <div class="navbar-center hidden lg:flex">
@@ -109,6 +110,7 @@
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import logo from '@/assets/logo-new.png'
 // import useEventChannel from '@/hooks/eventChannel'
 
 
